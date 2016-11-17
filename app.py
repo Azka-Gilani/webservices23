@@ -321,7 +321,7 @@ def makeWebhookResult(data):
   }
     else:
         message= {
-         "text":"Your location",   
+            
          "attachment": {
            "type": "template",
             "payload": {
@@ -353,6 +353,7 @@ def makeWebhookResult(data):
             
         }
       },
+            "text":"Your location",
              "quick_replies": [
             {
                 "content_type":"text",
@@ -381,7 +382,7 @@ def makeWebhookResult(data):
             },
                  
                {
-                "content_type":"location",
+                "content_type":"location"
             },
                  {
                 "content_type":"text",
