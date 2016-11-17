@@ -354,7 +354,7 @@ def makeWebhookResult(data):
             
         }
       },
-            
+             "text":"Please share your location:",
              "quick_replies": [
             {
                 "content_type":"text",
