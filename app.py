@@ -383,7 +383,7 @@ def makeWebhookResult(data):
             },
                  
                {
-                "content_type":"location"
+                "content_type":"location",
             },
                  {
                 "content_type":"text",
