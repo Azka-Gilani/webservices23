@@ -252,6 +252,7 @@ def makeWebhookResult(data):
         ]
            
     }
+        
     elif length==1:
                  message={
                    "attachment":{
@@ -380,8 +381,6 @@ def makeWebhookResult(data):
                  
                {
                 "content_type":"location",
-                "title": "Properties near by",
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
             },
                  {
                 "content_type":"text",
