@@ -96,8 +96,8 @@ def processRequest(req):
     #minimum_value=processMinimum(req)
     maximum_value=processMaximum(req)
     latest=processLatestProperties(req)
-    longitude = 72.981148
-    latitude = 33.642473
+    longitude = '72.981148'
+    latitude = '33.642473'
     #if minimum_value > maximum_value:
     #    minimum_value,maximum_value=maximum_value,minimum_value
     #else:
