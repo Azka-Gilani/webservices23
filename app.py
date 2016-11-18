@@ -234,7 +234,9 @@ def makeWebhookResult(data):
         message={
          "text":row_title[0],
          "quick_replies": [
-           
+           {
+                "content_type":"location"
+            },
                  {
                 "content_type":"text",
                 "title": "Purchase plot",
