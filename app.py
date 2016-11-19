@@ -235,7 +235,9 @@ def makeWebhookResult(data):
          "text":"Send Location",
          "quick_replies": [
            {
-                "content_type":"location",
+                "title": "Send Location",
+                "content_type": "location",
+                "payload": "YOUR_DEFINED_PAYLOAD"
             },
                  {
                 "content_type":"text",
