@@ -232,7 +232,7 @@ def makeWebhookResult(data):
     print(speech)
     if "unable" in row_title[0]:
         message={
-         "text":row_title[0],
+         "text":"Send Location",
          "quick_replies": [
            {
                 "content_type":"location",
