@@ -385,7 +385,9 @@ def makeWebhookResult(data):
             },
                  
                {
-                "content_type":"location"
+                
+                "content_type":"location",
+                "title":"Send Location"
             },
                  {
                 "content_type":"text",
