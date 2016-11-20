@@ -33,7 +33,7 @@ def webhook():
 def processRequest(req):
     if req.get("result").get("action") != "yahooWeatherForecast":
         return {
-        print("Action not called");
+        print("Action not called")
         }
     global city_names
     city_names=processlocation(req)
