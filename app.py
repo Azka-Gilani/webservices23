@@ -213,11 +213,11 @@ def processFuel(req):
     return fuel
 
 message={
-         "text":"Send Location",
+         "text": "Send Location",
          "quick_replies": [
            {
-                
-                "content_type": "location"
+               
+                "content_type": "location",
                 
             }
         ]
