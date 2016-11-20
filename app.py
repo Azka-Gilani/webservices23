@@ -235,24 +235,9 @@ def makeWebhookResult(data):
          "text":"Send Location",
          "quick_replies": [
            {
-                "title": "Send Location",
-                "content_type": "location",
-                "payload": "YOUR_DEFINED_PAYLOAD"
-            },
-                 {
-                "content_type":"text",
-                "title": "Purchase plot",
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            },
-                 {
-                "content_type":"text",
-                "title": "Sell Plot",
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            },
-                 {
-                "content_type":"text",
-                "title": "Rent Plot",
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
+                
+                "content_type": "location"
+                
             }
         ]
            
@@ -260,153 +245,27 @@ def makeWebhookResult(data):
         
     elif length==1:
                  message={
-                   "attachment":{
-                    "type":"template",
-                       "payload":{
-            "template_type":"generic",
-            "elements":[
-          {
-             "title":row_title[0],
-             "item_url":"http://www.aarz.pk/property-detail?id="+row_id[0],
-             "image_url":"http://www.aarz.pk/assets/images/properties/"+row_id[0]+"/"+row_id[0]+".actual.1.jpg" ,
-             "subtitle":row_location[0],
-             "buttons":[
-              {
-               "type":"web_url",
-               "url":"www.aarz.pk",
-               "title":"View Website"
-              }             
-            ]
-          }
-        ]
-      }
-    },
-                      "quick_replies": [
-            {
-                "content_type":"text",
-                "title": QR[0],
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            },
-                 {
-                "content_type":"text",
-                "title": QR[1],
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            },
-                 {
-                "content_type":"text",
-                "title": QR[2],
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            },
-                 {
-                "content_type":"text",
-                "title": QR[3],
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            },
-                 {
-                "content_type":"text",
-                "title": QR[4],
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            },
-                 {
-                "content_type":"text",
-                "title": "Purchase plot",
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            },
-                 {
-                "content_type":"text",
-                "title": "Sell Plot",
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            },
-                 {
-                "content_type":"text",
-                "title": "Rent Plot",
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            }
-        ]
-  }
-    else:
-        message= {
-            
-         "attachment": {
-           "type": "template",
-            "payload": {
-               "template_type": "generic",
-               "elements": [{
-               "title": row_title[0],
-               "subtitle": row_location[0],
-               "item_url": "http://www.aarz.pk/property-detail?id="+row_id[0],               
-               "image_url": "http://www.aarz.pk/assets/images/properties/"+row_id[0]+"/"+row_id[0]+".actual.1.jpg" ,
-                "buttons": [{
-                "type": "web_url",
-                "url": "www.aarz.pk",
-                "title": "Open Web URL"
-            }, 
-                   ],
-          }, 
-                   {
-                "title": row_title[1],
-                "subtitle": row_location[1],
-                "item_url":  "http://www.aarz.pk/property-detail?id="+row_id[1],               
-                "image_url": "http://www.aarz.pk/assets/images/properties/"+row_id[1]+"/"+row_id[1]+".actual.1.jpg",
-                "buttons": [{
-                "type": "web_url",
-                "url": "www.aarz.pk",
-                "title": "Open Web URL"
-            },
-                   ]
-          }]
-            
-        }
-      },
-             #"text":"Please share your location:",
-             "quick_replies": [
-            {
-                "content_type":"text",
-                "title": QR[0],
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            },
-                 {
-                "content_type":"text",
-                "title": QR[1],
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            },
-                 {
-                "content_type":"text",
-                "title": QR[2],
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            },
-                 {
-                "content_type":"text",
-                "title": QR[3],
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            },
-                 {
-                "content_type":"text",
-                "title": QR[4],
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            },
-                 
-               {
+         "text":"Send Location",
+         "quick_replies": [
+           {
                 
-                "content_type":"location",
-                "title":"Send Location"
-            },
-                 {
-                "content_type":"text",
-                "title": "Purchase plot",
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            },
-                 {
-                "content_type":"text",
-                "title": "Sell Plot",
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
-            },
-                 {
-                "content_type":"text",
-                "title": "Rent Plot",
-                "payload": "YOUR_DEFINED_PAYLOAD_FOR_NEXT_IMAGE"
+                "content_type": "location"
+                
             }
         ]
+           
+    }
+    else:
+         message={
+         "text":"Send Location",
+         "quick_replies": [
+           {
+                
+                "content_type": "location"
+                
+            }
+        ]
+           
     }
 
     return {
