@@ -212,6 +212,18 @@ def processFuel(req):
     fuel = parameters.get("fuelstation")
     return fuel
 
+message={
+         "text":"Send Location",
+         "quick_replies": [
+           {
+                
+                "content_type": "location"
+                
+            }
+        ]
+           
+    }
+
 def makeWebhookResult(data):
     i=0
     length=len(data)
@@ -229,44 +241,7 @@ def makeWebhookResult(data):
     # print(json.dumps(item, indent=4))
     speech = "This is the response from server."+ row_title[0]+""+intent_name
     print("Response:")
-    print(speech)
-    if "unable" in row_title[0]:
-        message={
-         "text":"Send Location",
-         "quick_replies": [
-           {
-                
-                "content_type": "location"
-                
-            }
-        ]
-           
-    }
-        
-    elif length==1:
-                 message={
-         "text":"Send Location",
-         "quick_replies": [
-           {
-                
-                "content_type": "location"
-                
-            }
-        ]
-           
-    }
-    else:
-         message={
-         "text":"Send Location",
-         "quick_replies": [
-           {
-                
-                "content_type": "location"
-                
-            }
-        ]
-           
-    }
+    print(speech) 
 
     return {
         "speech": speech,
